@@ -3,7 +3,7 @@
 from enum import Enum
 
 
-class StreetType(Enum):
+class SiteType(Enum):
     GO = 0
     PROPERTY = 1
     JAIL = 2
@@ -13,7 +13,7 @@ class StreetType(Enum):
     GO_TO_JAIL = 6
 
 
-class StreetStatus(Enum):
+class SiteStatus(Enum):
     AVAILABLE = 0
     SOLD = 1
     MORTGAGE = 2

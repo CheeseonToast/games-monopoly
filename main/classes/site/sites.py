@@ -1,13 +1,13 @@
 # Copyright Gary Roberson 2024
 
-from main.enum.street_enum import *
+from main.enum.site_enums import *
 from utils.data_parser.data_parser import PropertyData
 import math
 
 
 class Site:
     def __init__(self, street_type: int, site_position: int):
-        self._street_type = StreetType(street_type)
+        self._site_type = SiteType(street_type)
         self._site_position = site_position
         self._owner = None
         self.name = None
@@ -15,11 +15,11 @@ class Site:
 
     #  Setters
     def set_type(self, i):
-        self._street_type = StreetType(i)
+        self._site_type = SiteType(i)
 
     #  Getters
     def get_type(self):
-        return self._street_type
+        return self._site_type
 
     def set_mortgage_value(self, i):
         self.mortgage_value = math.ceil(i/2)

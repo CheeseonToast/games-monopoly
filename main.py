@@ -13,4 +13,4 @@ class Main:
 
 if __name__ == '__main__':
     main = Main()
-    print(main.board.streets[1].name)
+    print(main.board.sites[1].name)

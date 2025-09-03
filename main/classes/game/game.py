@@ -4,41 +4,48 @@ from utils.data_parser.data_parser import GameData
 
 
 class GameState(GameData):
-    def __init__(self):
-        super().__init__()
+	def __init__(self):
+		super().__init__()
+		# Game state variables
+		self.dice = 0
+		self.money = 0
+		self.houses = 0
+		self.hotels = 0
+		self.chance_cards_count = 0
+		self.community_chest_cards_count = 0
 
-    # Houses
-    def remove_houses(self, i):
-        self.houses = self.houses - i
+	# Houses
+	def remove_houses(self, i):
+		self.houses = self.houses - i
 
-    def add_houses(self, i):
-        self.houses = self.houses + i
+	def add_houses(self, i):
+		self.houses = self.houses + i
 
-    def get_houses(self):
-        return self.houses
+	def get_houses(self):
+		return self.houses
 
-    # Hotels
-    def remove_hotels(self, i):
-        self.hotels = self.hotels - i
+	# Hotels
+	def remove_hotels(self, i):
+		self.hotels = self.hotels - i
 
-    def add_hotels(self, i):
-        self.hotels = self.hotels + i
+	def add_hotels(self, i):
+		self.hotels = self.hotels + i
 
-    def get_hotels(self):
-        return self.hotels
+	def get_hotels(self):
+		return self.hotels
 
-    def get_starting_money(self):
-        return self.starting_money
+	def get_starting_money(self):
+		return self.starting_money
 
-    def get_sites(self):
-        return self.sites
+	def get_sites(self):
+		return self.sites
 
-    def get_num_dice(self):
-        return self.dice
+	def get_num_dice(self):
+		return self.dice
 
-    # Draw cards
-    def get_chance_cards_count(self):
-        return self.chance_cards_count
+	# Draw cards
+	def get_chance_cards_count(self):
+		return self.chance_cards_count
 
-    def get_community_chest_cards_count(self):
-        return self.community_chest_cards_count
+	def get_community_chest_cards_count(self):
+		return self.community_chest_cards_count
