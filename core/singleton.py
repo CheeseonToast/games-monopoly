@@ -24,7 +24,7 @@ def test_singleton(value: str) -> None:
     logger = Logger(value)
     print(logger.value)
 """
-from config.porting import Porting
+from core.porting import Porting
 
 if Porting.is_python_3_or_newer():
     from threading import Lock

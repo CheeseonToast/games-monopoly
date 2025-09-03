@@ -89,3 +89,18 @@ class PropertyData(PropertyDataParser):
         self.house_3_rent = self.street_data[str(site)]["house_3_rent"]
         self.house_4_rent = self.street_data[str(site)]["house_4_rent"]
         self.hotel_rent = self.street_data[str(site)]["hotel_rent"]
+
+
+class GameData(DictContent):
+    def __init__(self):
+        game_data_path = "../../../resources/game_data.json"
+        super().__init__(game_data_path)
+        self.houses = self._content["house_count"]
+        self.hotels = self._content["hotel_count"]
+        self.chance_cards_count = self._content["chance_cards"]
+        self.community_chest_cards_count = self._content["community_chest_cards"]
+        self.starting_money = self._content["starting_money"]
+        self.sites = self._content["sites"]
+        self.sites_type_list = self._content["site_type"]
+        self.dice = self._content["dice"]
+        self.players = []

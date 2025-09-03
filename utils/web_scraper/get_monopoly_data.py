@@ -9,4 +9,5 @@ import os
 url = "https://en.wikibooks.org/wiki/Monopoly/Properties_reference"
 html = requests.get(url).text
 file_path = os.path.abspath("../../resources/property_data.json")
+
 datafile = pd.read_html(StringIO(html))[-1].to_json(file_path)

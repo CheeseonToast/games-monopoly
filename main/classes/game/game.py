@@ -1,21 +1,6 @@
 # Copyright Gary Roberson 2024
 
-from utils.data_parser.data_parser import DictContent
-
-
-class GameData(DictContent):
-    def __init__(self):
-        game_data_path = "../../../resources/game_data.json"
-        super().__init__(game_data_path)
-        self.houses = self._content["house_count"]
-        self.hotels = self._content["hotel_count"]
-        self.chance_cards_count = self._content["chance_cards"]
-        self.community_chest_cards_count = self._content["community_chest_cards"]
-        self.starting_money = self._content["starting_money"]
-        self.sites = self._content["sites"]
-        self.sites_type_list = self._content["site_type"]
-        self.dice = self._content["dice"]
-        self.players = []
+from utils.data_parser.data_parser import GameData
 
 
 class GameState(GameData):
@@ -57,4 +42,3 @@ class GameState(GameData):
 
     def get_community_chest_cards_count(self):
         return self.community_chest_cards_count
-

@@ -26,7 +26,7 @@ class Site:
 
 
 class Property(Site):
-    def __init__(self, street_type: int, site_position: int, colour=(255, 255, 255)):
+    def __init__(self, street_type: int = 0, site_position: int = 0, colour=(255, 255, 255)):
         super().__init__(street_type, site_position)
         self.data = PropertyData(site_position)
         self.set_mortgage_value(self.data.cost)
